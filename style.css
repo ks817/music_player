@@ -1,4 +1,4 @@
-/* Images created by: https://artbystevej.com/*/
+/* Images created by: https://artbystevej.com/ or https://pexels.com/@steve */
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap');
 
 html {
@@ -8,7 +8,7 @@ html {
 body {
   margin: 0;
   min-height: 100vh;
-  background: #c9ced3;
+  background:  rgb(250, 235, 235);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,7 +16,15 @@ body {
   font-size: 12px;
 }
 
-
+.player-container {
+  height: 500px;
+  width: 400px;
+  background: rgb(152, 75, 86);
+  /*rounded corner*/
+  border-radius: 20px;
+  /*shadow for element : horizontal, vertical, opacity, how far, color */
+  box-shadow: 0 15px 30px 5px black;
+}
 
 .img-container {
 
