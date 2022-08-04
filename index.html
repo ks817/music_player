@@ -16,7 +16,24 @@
         </div>
         <h2 id="title"> Music title</h2>
         <h3 id="artist"> Artist Name</h3>
-        <audio src="" controls></audio>
+        <audio src=""></audio>
+        <!-- progress container-->
+        <div class="progress-container" id="progress-container">
+            <div class="progress" id="progress"></div>
+            <div class="duration-wrapper">
+                <span id="current-time">0.00</span>
+                <span id="duration">2:31</span>
+            </div>
+        </div>
+        <!--Controls-->
+        <div class="player-controls">
+            <!--Make each icon; i element w font awesome solid(fas) class -->
+            <i class="fas fa-backward" id="previous" title="previous"></i>
+            <!--Make this main button by adding main-button class-->
+            <i class="fas fa-play main-button" id="play" title="play"></i>
+            <i class="fas fa-forward" id="next" title="next"></i>
+
+        </div>
     </div>
     <!-- Script -->
     <script src="script.js"></script>

@@ -27,18 +27,19 @@ body {
 }
 
 .img-container {
-
+  height: 300px;
+  width: 300px;
   position: relative;
   top: -50px;
   left: 50px;
 }
 
-img{
-  height: 50%;
-  width: 50%;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
+.img-container img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 5px 20px 5px rgb(96, 45, 45);
 }
 
 
@@ -87,15 +88,19 @@ h3 {
   left: 120px;
   width: 200px;
 }
-
+/* Font awesome solid class*/
 .fas {
   font-size: 30px;
-  color: rgb(129, 129, 129);
+  color: rgb(50, 34, 34);
   margin-right: 30px;
-
+  cursor: pointer;
+  user-select: none;
 }
 
-
+/*activated when pointer is hovered; 40% darker*/
+.fas:hover{
+  filter: brightness(60%);
+}
 
 .main-button {
   font-size: 40px;
@@ -105,7 +110,10 @@ h3 {
 
 /* Media Query: iPhone (Vertical) */
 @media screen and (max-width: 376px) {
-
+  
+  .player-container{
+    width: 95vw;
+  }
 
   .img-container {
     left: 29px;
