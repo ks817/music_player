@@ -11,13 +11,14 @@ const next = document.getElementById('next');
 const songs = [
     {
         name: 'music-1',
-        displayName: '',
-        artist: '',
+        displayName: 'Flowing Water: Creek',
+        artist: 'Sounds of Beautiful World',
     },
+
     {
         name: 'music-2',
-        displayName: '',
-        artist: '',
+        displayName: 'Ocean Coast',
+        artist: 'Ashaneen',
     },
 ];
 
@@ -32,8 +33,9 @@ function playSong(){
     play.setAttribute('title', 'pause');
     music.play();
 }
+
 //Pause
-function pausesong(){
+function pauseSong(){
     isPlaying = false;
     play.classList.replace('fa-pause','fa-play');
     play.setAttribute('title', 'play');
@@ -41,14 +43,14 @@ function pausesong(){
 }
 
 //Event listener for play or pause
-play.addEventListener('click', () => (isPlaying ? pausesong() : playSong()));
+play.addEventListener('click', () => (isPlaying ? pauseSong() : playSong()));
 
 // Update DOM
 function loadSong(song) {
     title.textContent = song.displayName;
     artist.textContent = song.artist;
-    music.src = `assets/music/${song.name}.mp3`;
-    image.src = `assets/img/${song.name}.jpg`;
+    music.src = `music/${song.name}.mp3`;
+    image.src = `img/${song.name}.jpeg`;
 }
 
 //Current Song

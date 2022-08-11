@@ -8,7 +8,7 @@ html {
 body {
   margin: 0;
   min-height: 100vh;
-  background:  rgb(250, 235, 235);
+  background:white;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,11 +19,11 @@ body {
 .player-container {
   height: 500px;
   width: 400px;
-  background: rgb(152, 75, 86);
+  background: rgb(201, 122, 149);
   /*rounded corner*/
   border-radius: 20px;
   /*shadow for element : horizontal, vertical, opacity, how far, color */
-  box-shadow: 0 15px 30px 5px black;
+  box-shadow: 0 15px 30px 5px rgb(157, 93, 93);
 }
 
 .img-container {
@@ -91,7 +91,7 @@ h3 {
 /* Font awesome solid class*/
 .fas {
   font-size: 30px;
-  color: rgb(50, 34, 34);
+  color: rgb(242, 222, 222);
   margin-right: 30px;
   cursor: pointer;
   user-select: none;
