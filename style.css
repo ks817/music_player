@@ -19,7 +19,7 @@ body {
 .player-container {
   height: 500px;
   width: 400px;
-  background: rgb(152, 75, 86);
+  background: rgb(205, 109, 124);
   /*rounded corner*/
   border-radius: 20px;
   /*shadow for element : horizontal, vertical, opacity, how far, color */
@@ -47,6 +47,7 @@ h2 {
   font-size: 25px;
   text-align: center;
   margin: 0;
+  color: whitesmoke;
 }
 
 h3 {
@@ -54,6 +55,7 @@ h3 {
   text-align: center;
   font-weight: 400;
   margin: 5px 0 0;
+  color: whitesmoke;
 }
 
 /* Progress */
@@ -67,7 +69,7 @@ h3 {
 }
 
 .progress {
-  background: #242323;
+  background: black;
   border-radius: 5px;
   height: 100%;
   width: 66%;
@@ -79,6 +81,7 @@ h3 {
   top: -25px;
   display: flex;
   justify-content: space-between;
+  color: whitesmoke
 }
 
 /* Controls */
@@ -88,10 +91,11 @@ h3 {
   left: 120px;
   width: 200px;
 }
+
 /* Font awesome solid class*/
 .fas {
   font-size: 30px;
-  color: rgb(50, 34, 34);
+  color: whitesmoke;
   margin-right: 30px;
   cursor: pointer;
   user-select: none;
@@ -100,6 +104,7 @@ h3 {
 /*activated when pointer is hovered; 40% darker*/
 .fas:hover{
   filter: brightness(60%);
+  color: black;
 }
 
 .main-button {
