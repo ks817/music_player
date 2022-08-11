@@ -1,10 +1,25 @@
-//target audio and buttons
-
+const image = document.querySelector('img');
+const title = document.getElementById('title');
+const artist = document.getElementById('artist');
 const music = document.querySelector('audio');
 //Buttons
-const prev = document.getElementById('prev');
+const prev = document.getElementById('previous');
 const play = document.getElementById('play');
 const next = document.getElementById('next');
+
+//Create an array of object with all info for each songs
+const songs = [
+    {
+        name: 'music-1',
+        displayName: '',
+        artist: '',
+    },
+    {
+        name: 'music-2',
+        displayName: '',
+        artist: '',
+    },
+];
 
 //check if playing
 let isPlaying = false;
@@ -61,3 +76,7 @@ function nextSong() {
 
 // Load First Song
 loadSong(songs[songIndex]);
+
+// Event Listeners for Buttons
+prev.addEventListener('click', prevSong);
+next.addEventListener('click', nextSong);
