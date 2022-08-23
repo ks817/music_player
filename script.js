@@ -2,6 +2,11 @@ const image = document.querySelector('img');
 const title = document.getElementById('title');
 const artist = document.getElementById('artist');
 const music = document.querySelector('audio');
+//Progress bar
+const progressContainer = document.getElementById('progress-container');
+const progress = document.getElementById('progress');
+const CurrTimeElement = document.getElementById('current-time');
+const durationElement = document.getElementById('duration');
 //Buttons
 const prev = document.getElementById('previous');
 const play = document.getElementById('play');
@@ -76,9 +81,47 @@ function nextSong() {
     playSong();
 }
 
-// Load First Song
+//Load First Song
 loadSong(songs[songIndex]);
+
+//Update Progress Bar & Time
+function updateProgressBar(e){
+    if (isPlaying){
+        const { duration, currentTime } = e.srcElement;
+        //Update progress bar width
+        const progressPercent = (currentTime / duration) * 100;
+        //change the number into string to update css
+        progress.style.width = `${progressPercent}%`;
+        //Calculate the display for duration
+        //time is in sec so convert to largest int minute
+        const durationMinutes = Math.floor(duration / 60);
+        //Get the seconds using mod
+        let durationSeconds = Math.floor(duration % 60);
+        //if secs less than 10 then add 0 infront
+        if(durationSeconds < 10){
+            durationSeconds = `0${durationSeconds}`;
+        }
+        //Avoid NAN by targeting dur element after math is done
+        if(durationSeconds){
+            //change the text content in duration element 
+            durationElement.textContent = `${durationMinutes}:${durationSeconds}`;
+        }
+        //Calculate the display for Current Time
+        //time is in sec so convert to largest int minute
+        const currentMinutes = Math.floor(currentTime / 60);
+        //Get the seconds using mod
+        let currentSeconds = Math.floor(currentTime % 60);
+        //if secs less than 10 then add 0 infront
+        if(currentSeconds < 10){
+            currentSeconds = `0${currentSeconds}`;
+        }
+        CurrTimeElement.textContent = `${currentMinutes}:${currentSeconds}`;
+
+        
+    }
+}
 
 // Event Listeners for Buttons
 prev.addEventListener('click', prevSong);
 next.addEventListener('click', nextSong);
+music.addEventListener('timeupdate', updateProgressBar);
